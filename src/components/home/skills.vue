@@ -131,7 +131,7 @@ export default {
       this.tab = tab
     },
     requireImg(img) {
-      return require(`~/assets/icons/${img}`)
+      return require(`@/assets/icons/${img}`)
     }
   }
 }
@@ -150,11 +150,11 @@ export default {
       cursor: pointer;
       margin: 5px 0;
       padding: 5px 20px;
-      color: #003273;
       border-radius: 6px;
 
       &.active {
         background-color: #c0e3e7;
+        color: #003273;
       }
     }
   }

@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="cont" id="b">
-<!--        <home-skills/>-->
+        <skills/>
       </div>
       <div class="cont" style="height: 150vh;" id="c">
         <h1>text yes</h1>
@@ -22,10 +22,11 @@
 
 <script>
 import LeftSide from "@/components/home/left-side";
+import Skills from "@/components/home/skills";
 
 export default {
   name: "Home",
-  components: {LeftSide}
+  components: {Skills, LeftSide}
 }
 </script>
 
