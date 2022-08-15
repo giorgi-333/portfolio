@@ -9,6 +9,7 @@
           I have graduated from Georgian Technical University of Informatics and Management
           Systems. As you will see below I am also professional teacher of college.
         </div>
+        <education/>
       </div>
       <div class="cont" id="b">
         <skills/>
@@ -23,10 +24,11 @@
 <script>
 import LeftSide from "@/components/home/left-side";
 import Skills from "@/components/home/skills";
+import Education from "@/components/home/education";
 
 export default {
   name: "Home",
-  components: {Skills, LeftSide}
+  components: {Education, Skills, LeftSide}
 }
 </script>
 
