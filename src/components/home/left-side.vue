@@ -7,6 +7,7 @@
         <div>Web Developer</div>
       </div>
     </div>
+
     <div class="my-info menu-cont">
       <h3>Navigation</h3>
       <div class="menu">
@@ -29,9 +30,9 @@
         <img src="@/assets/icons/portfolio.png" alt="">
         <span>Projects</span>
       </a>
-
       </div>
     </div>
+
   </div>
 </template>
 
@@ -94,6 +95,8 @@ export default {
 
   h3 {
     text-align: center;
+    font-weight: normal;
+    font-size: 20px;
   }
 }
 
