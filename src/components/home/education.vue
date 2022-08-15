@@ -1,48 +1,41 @@
-<template>
-  <div class="edu-lang">
-    <div class="line"></div>
-    <div class="education">
-      <h2>educations</h2>
-      <span class="years">2018 - 2022</span>
-      <div class="text">
-        <div>Georgian Technical University</div>
-        <span>Informatics and Management Systems</span>
-      </div>
-    </div>
-    <div class="langs">
-      <h2>languages</h2>
-
-      <div class="lang">
-        <h5>Georgian</h5>
-        <div class="circles">
-          <div
-              class="circle"
-              v-for="i in 8"
-              :class="{'active': i <= 8}"
-          ></div>
-          <span>native</span>
-        </div>
-      </div>
-
-      <div class="lang">
-        <h5>English</h5>
-        <div class="circles">
-          <div
-              class="circle"
-              v-for="i in 8"
-              :class="{'active': i <= 4}"
-          ></div>
-          <span>intermediate</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<template lang="pug">
+.edu-lang
+  .line
+  .education
+    h2 educations
+    span.years 2018 - 2022
+    .text
+      div Georgian Technical University
+      span Informatics and Management Systems
+  .languages
+    h2 languages
+    .lang(v-for='lang in languages')
+      h5 {{ lang.title }}
+      .circles
+        .circle(v-for='i in 8' :class="{'active': i <= lang.level}")
+        span  {{ lang.levelText }}
 </template>
 
 <script>
 export default {
-  name: "education"
+  name: "education",
+  data() {
+    return {
+      languages: [
+        {
+          title: 'Georgian',
+          level: 8,
+          levelText: 'native'
+        },
+        {
+          title: 'English',
+          level: 4,
+          levelText: 'intermediate'
+        }
+      ]
+
+    }
+  }
 }
 </script>
 
@@ -91,7 +84,7 @@ export default {
     }
   }
 
-  .langs {
+  .languages {
     .lang {
       padding-bottom: 10px;
 

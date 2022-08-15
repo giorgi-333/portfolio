@@ -1,39 +1,28 @@
-<template>
-  <div class="left-side">
-    <div class="my-info avatar-info">
-      <img src="@/assets/img/itsme.jpg">
-      <div>
-        <h1>Giorgi Enuqidze</h1>
-        <div>Web Developer</div>
-      </div>
-    </div>
-
-    <div class="my-info menu-cont">
-      <h3>Navigation</h3>
-      <div class="menu">
-        <a href="#a">
-          <img src="@/assets/icons/profile.png" alt="">
-          <span>About me</span>
-        </a>
-        <a href="#b">
-          <img src="@/assets/icons/file.png" alt="">
-          <span>Skills</span>
-        </a>
-        <a href="#c">
-          <img src="@/assets/icons/portfolio.png" alt="">
-          <span>Projects</span>
-        </a>
-        <a href="#c">
-          <img src="@/assets/icons/file.png" alt="">
-          <span>Skills</span>
-        </a><a href="#c">
-        <img src="@/assets/icons/portfolio.png" alt="">
-        <span>Projects</span>
-      </a>
-      </div>
-    </div>
-
-  </div>
+<template lang="pug">
+.left-side
+  .my-info.avatar-info
+    img(src='@/assets/img/itsme.jpg')
+    div
+      h1 Giorgi Enuqidze
+      div Web Developer
+  .my-info.menu-cont
+    h3 Navigation
+    .menu
+      a(href='#a')
+        img(src='@/assets/icons/profile.png')
+        span About me
+      a(href='#b')
+        img(src='@/assets/icons/file.png')
+        span Skills
+      a(href='#c')
+        img(src='@/assets/icons/portfolio.png')
+        span Projects
+      a(href='#c')
+        img(src='@/assets/icons/file.png')
+        span Skills
+      a(href='#c')
+        img(src='@/assets/icons/portfolio.png')
+        span Projects
 </template>
 
 <script>

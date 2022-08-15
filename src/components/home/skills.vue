@@ -1,42 +1,19 @@
-<template>
-  <div>
-    <h1>
-      My skills
-    </h1>
-    <div class="container">
-
-      <div class="tabs">
-        <div
-          class="btn"
-          v-for="item in tabs"
-          :class="{ 'active': item === tab }"
-          @click="selectTab(item)"
-        >
-          {{ item }}
-        </div>
-      </div>
-
-      <div class="contents">
-
-        <div class="content" v-for="content in contents" :class="{ 'active': tab === content.key}">
-          <div class="skills-images">
-            <div v-for="item in content.list">
-              <img :src="requireImg(item.img)">
-              <span> {{ item.text }} </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div> <!-- tab content-->
-
-
-    <code class="text-secondary" style="position: absolute; bottom: 10px; right: 0;">
-      (knowledge levels)
-    </code>
-
-
-  </div>
+<template lang="pug">
+div
+  h1
+    | My skills
+  .container
+    .tabs
+      .btn(v-for='item in tabs' :class="{ 'active': item === tab }" @click='selectTab(item)')
+        | {{ item }}
+    .contents
+      .content(v-for='content in contents' :class="{ 'active': tab === content.key}")
+        .skills-images
+          div(v-for='item in content.list')
+            img(:src='requireImg(item.img)')
+            span  {{ item.text }}
+  code.text-secondary(style='position: absolute; bottom: 10px; right: 0;')
+    | (knowledge levels)
 </template>
 
 <script>
@@ -197,6 +174,4 @@ export default {
     }
   }
 }
-
-
 </style>
