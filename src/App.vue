@@ -7,6 +7,32 @@
 </template>
 
 <style lang="scss">
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2efe9;
+}
+
+h1 {
+  color: rgb(33, 37, 41);
+  font-weight: 500;
+  font-size: 26px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
