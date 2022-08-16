@@ -8,21 +8,21 @@
   .my-info.menu-cont
     h3 Navigation
     .menu
-      a(href='#a')
+      a(href='#aboutMe')
         img(src='@/assets/icons/profile.png')
         span About me
-      a(href='#b')
+      a(href='#skills')
         img(src='@/assets/icons/file.png')
         span Skills
+      a(href='#experience')
+        img(src='@/assets/icons/work-time.png')
+        span Experience
       a(href='#c')
         img(src='@/assets/icons/portfolio.png')
         span Projects
       a(href='#c')
-        img(src='@/assets/icons/file.png')
-        span Skills
-      a(href='#c')
-        img(src='@/assets/icons/portfolio.png')
-        span Projects
+        img(src='@/assets/icons/envelope.png')
+        span Contact
 </template>
 
 <script>

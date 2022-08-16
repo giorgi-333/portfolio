@@ -12,8 +12,6 @@ div
           div(v-for='item in content.list')
             img(:src='requireImg(item.img)')
             span  {{ item.text }}
-  code.text-secondary(style='position: absolute; bottom: 10px; right: 0;')
-    | (knowledge levels)
 </template>
 
 <script>
@@ -21,81 +19,81 @@ export default {
   name: "skills",
   data() {
     return {
-      tabs: ['High', 'Middle', 'Basics'],
-      tab: 'High',
+      tabs: ['Proficient', 'Competent', 'Beginner'],
+      tab: 'Proficient',
       contents: [
         {
-          key: "High",
+          key: "Proficient",
           list: [
             {
               img: "html-5.png",
-              text: "HTML"
+              text: "HTML & Pug"
             },
             {
               img: "css.png",
-              text: "CSS"
+              text: "CSS & Sass"
             },
             {
               img: "js.png",
               text: "Javascript"
             },
             {
-              img: "bootstrap.svg",
-              text: "Bootstrap"
-            },
-            {
               img: "jquery.png",
               text: "Jquery"
+            },
+            {
+              img: "bootstrap.svg",
+              text: "Bootstrap"
             },
             {
               img: "vue.png",
-              text: "Vue"
+              text: "Vue & Nuxt"
             },
             {
-              img: "php.png",
-              text: "PHP"
+              img: "vuetify.svg",
+              text: 'Vuetify'
             },
             {
-              img: "laravel.svg",
-              text: "Laravel"
+              img: "git.png",
+              text: "git"
+            },
+            {
+              img: "wordpress.png",
+              text: "Wordpress"
             }
           ]
         },
         {
-          key: "Middle",
+          key: "Competent",
           list: [
-            {
-              img: "html-5.png",
-              text: "HTML"
-            },
-            {
-              img: "css.png",
-              text: "CSS"
-            },
-            {
-              img: "js.png",
-              text: "Javascript"
-            }
-          ]
-        },
-        {
-          key: "Basics",
-          list: [
-            {
-              img: "bootstrap.svg",
-              text: "Bootstrap"
-            },
-            {
-              img: "jquery.png",
-              text: "Jquery"
-            },
             {
               img: "php.png",
-              text: "PHP"
+              text: "PHP & MySQL"
             },
             {
               img: "laravel.svg",
               text: "Laravel"
+            },
+            {
+              img: "react.png",
+              text: "React"
+            }
+          ]
+        },
+        {
+          key: "Beginner",
+          list: [
+            {
+              img: "c-plus.png",
+              text: "C++"
+            },
+            {
+              img: "c-sharp.png",
+              text: "C#"
+            },
+            {
+              img: "react.png",
+              text: "React Native"
             }
           ]
         },

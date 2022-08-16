@@ -13,7 +13,7 @@
       h5 {{ lang.title }}
       .circles
         .circle(v-for='i in 8' :class="{'active': i <= lang.level}")
-        span  {{ lang.levelText }}
+        span {{ lang.levelText }}
 </template>
 
 <script>

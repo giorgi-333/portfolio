@@ -1,5 +1,5 @@
 <template>
-  <div class="content" id="a">
+  <div class="content" id="aboutMe">
     <left-side/>
     <div class="right-side">
       <div class="cont">
@@ -8,14 +8,22 @@
           I am web developer, I Have working experience with front-end but i also know back-end. My goal is create modern and responsive websites.
           I have graduated from Georgian Technical University of Informatics and Management
           Systems. As you will see below I am also professional teacher of college.
+          <a href=""></a>
         </div>
         <education/>
       </div>
-      <div class="cont" id="b">
+      <div class="cont" id="skills">
         <skills/>
       </div>
-      <div class="cont" style="height: 150vh;" id="c">
-        <h1>text yes</h1>
+      <div class="cont" id="experience">
+        <experience/>
+      </div>
+      <div class="cont">
+        <img src="@/assets/icons/fiver.png" width="40">
+        https://www.fiverr.com/giorgi33
+        <br>
+        <img src="@/assets/icons/upwork.png" width="40">
+        https://www.upwork.com/freelancers/~013470838569f6afc0
       </div>
     </div>
   </div>
@@ -25,10 +33,11 @@
 import LeftSide from "@/components/home/left-side";
 import Skills from "@/components/home/skills";
 import Education from "@/components/home/education";
+import Experience from "@/components/home/experience";
 
 export default {
   name: "Home",
-  components: {Education, Skills, LeftSide}
+  components: {Experience, Education, Skills, LeftSide}
 }
 </script>
 
