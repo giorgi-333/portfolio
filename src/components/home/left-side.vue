@@ -17,10 +17,10 @@
       a(href='#experience')
         img(src='@/assets/icons/work-time.png')
         span Experience
-      a(href='#c')
+      a(href='#projects')
         img(src='@/assets/icons/portfolio.png')
         span Projects
-      a(href='#c')
+      a(href='#contact')
         img(src='@/assets/icons/envelope.png')
         span Contact
 </template>

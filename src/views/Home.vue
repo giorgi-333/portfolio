@@ -1,5 +1,5 @@
 <template>
-  <div class="content" id="aboutMe">
+  <div class="home" id="aboutMe">
     <left-side/>
     <div class="right-side">
       <div class="cont">
@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 /*  */
-.content {
+.home {
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
