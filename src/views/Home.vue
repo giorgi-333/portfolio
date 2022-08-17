@@ -5,7 +5,8 @@
       <div class="cont">
         <h1>Hello, I am giorgi</h1>
         <div>
-          I am web developer, I Have working experience with front-end but i also know back-end. My goal is create modern and responsive websites.
+          I am web developer, I Have working experience with front-end but i also know back-end. My goal is create
+          modern and responsive websites.
           I have graduated from Georgian Technical University of Informatics and Management
           Systems. As you will see below I am also professional teacher of college.
           <a href=""></a>
@@ -18,12 +19,11 @@
       <div class="cont" id="experience">
         <experience/>
       </div>
-      <div class="cont">
-        <img src="@/assets/icons/fiver.png" width="40">
-        https://www.fiverr.com/giorgi33
-        <br>
-        <img src="@/assets/icons/upwork.png" width="40">
-        https://www.upwork.com/freelancers/~013470838569f6afc0
+      <div class="cont" id="projects">
+       <projects/>
+      </div>
+      <div class="cont" id="contact">
+        <contact/>
       </div>
     </div>
   </div>
@@ -34,10 +34,12 @@ import LeftSide from "@/components/home/left-side";
 import Skills from "@/components/home/skills";
 import Education from "@/components/home/education";
 import Experience from "@/components/home/experience";
+import Contact from "@/components/home/contact";
+import Projects from "@/components/home/projects";
 
 export default {
   name: "Home",
-  components: {Experience, Education, Skills, LeftSide}
+  components: {Projects, Contact, Experience, Education, Skills, LeftSide}
 }
 </script>
 

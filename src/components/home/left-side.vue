@@ -84,8 +84,6 @@ export default {
 
   h3 {
     text-align: center;
-    font-weight: normal;
-    font-size: 20px;
   }
 }
 
