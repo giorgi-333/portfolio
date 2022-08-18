@@ -20,12 +20,13 @@
         <experience/>
       </div>
       <div class="cont" id="projects">
-       <projects/>
+        <projects/>
       </div>
       <div class="cont" id="contact">
         <contact/>
       </div>
     </div>
+    <img src='@/assets/icons/arrow-top.png' class="scroll-top" v-if="showScrollTop" @click="scrollToTop">
   </div>
 </template>
 
@@ -39,7 +40,30 @@ import Projects from "@/components/home/projects";
 
 export default {
   name: "Home",
-  components: {Projects, Contact, Experience, Education, Skills, LeftSide}
+  components: {Projects, Contact, Experience, Education, Skills, LeftSide},
+  data() {
+    return {
+      showScrollTop: false
+    }
+  },
+  methods: {
+    handleScroll() {
+      if (!this.showScrollTop && window.scrollY > 100) {
+        this.showScrollTop = true
+      } else if (window.scrollY <= 100) {
+        this.showScrollTop = false
+      }
+    },
+    scrollToTop() {
+      window.scrollTo({top: 0})
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 }
 </script>
 
@@ -79,5 +103,13 @@ export default {
   line-height: 28px;
 }
 
+/* */
+.scroll-top {
+  cursor: pointer;
+  width: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
 
 </style>

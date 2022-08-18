@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import projectsList from "@/data/projects";
+//
 export default {
   name: "projects",
   data() {
@@ -33,39 +35,12 @@ export default {
           text: 'Independently'
         }
       ],
-      tab: null,
-      projectsList: [
-        {
-          cat: 1,
-          name: 'The contract chair company',
-          img: '1.png'
-        },
-        {
-          cat: 1,
-          name: 'The contract chair company',
-          img: '1.png'
-        },
-        {
-          cat: 1,
-          name: 'The contract chair company',
-          img: '1.png'
-        },
-        {
-          cat: 2,
-          name: 'The contract chair company',
-          img: '1.png'
-        },
-        {
-          cat: 2,
-          name: 'The contract chair company',
-          img: '1.png'
-        }
-      ]
+      tab: null
     }
   },
   computed: {
     projects() {
-      return this.projectsList.filter((item) => {
+      return projectsList.filter((item) => {
         return !this.tab || this.tab === item.cat
       })
     }
