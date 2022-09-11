@@ -1,15 +1,22 @@
 <template lang="pug">
 .modal(@click="close")
   .modal-content(@click.stop)
-    p text text text
+    img(:src="requireImg(project.img)")
+    .modal-info
+      h1 {{ project.name }}
+      p text text text
 </template>
 
 <script>
 export default {
   name: "modal",
+  props: ["project"],
   methods: {
     close() {
       this.$emit('close')
+    },
+    requireImg(img) {
+      return require(`@/assets/projects/${img}`)
     }
   }
 }
@@ -29,13 +36,31 @@ export default {
   background-color: rgba(0, 0, 0, 0.55);
 
   .modal-content {
-    width: 400px;
-    height: 300px;
+    min-width: 400px;
+    min-height: 300px;
     background-color: #fff;
     border-radius: 4px;
-    padding: 15px;
+    padding: 40px 25px;
     position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 
+    img {
+      width: 550px;
+      box-shadow: 2px 2px 8px #333;
+      border-radius: 4px;
+    }
+
+    .modal-info {
+      padding: 0 30px;
+      h1 {
+        font-weight: bold;
+        color: black;
+        font-size: 24px;
+        font-family: 'Itim', sans-serif;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 </style>
