@@ -6,21 +6,28 @@
     .tab(v-for="item in tabs" :class="{'active': item.id === tab}" @click="tab=item.id")
       | {{ item.text }}
   .list
-    .project(v-for="item in projects" :class="{'animation':animation}")
+    .project(v-for="item in projects" :class="{'animation':animation}" @click="project = item; showModal = true")
       img(:src="requireImg(item.img)")
       .overlay
         h2 {{ item.name }}
         button read more
+  modal(v-if="showModal" :project="project" @close="showModal = false")
 </template>
 
 <script>
 import projectsList from "@/data/projects";
+import modal from "@/components/general/modal";
 //
 export default {
   name: "projects",
+  components: {
+    modal
+  },
   data() {
     return {
       animation: true,
+      project: null,
+      showModal: false,
       tabs: [
         {
           id: null,
