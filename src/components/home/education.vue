@@ -46,6 +46,10 @@ export default {
   position: relative;
   padding-top: 25px;
 
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   .line {
     position: absolute;
     top: 0;
@@ -58,6 +62,9 @@ export default {
 
   h2 {
     margin-bottom: 20px;
+    @media(max-width: 768px) {
+       margin-bottom: 10px;
+    }
   }
 
   .education {
@@ -85,6 +92,12 @@ export default {
   }
 
   .languages {
+
+    h2 {
+      @media(max-width: 768px) {
+       margin-top: 20px;
+      }
+    }
     .lang {
       padding-bottom: 10px;
 

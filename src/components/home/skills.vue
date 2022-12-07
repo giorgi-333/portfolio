@@ -120,7 +120,17 @@ export default {
   grid-template-columns: 130px auto;
   font-family: 'Nunito', sans-serif;
 
+  @media(max-width: 768px) {
+    grid-template-columns: auto;
+  }
+
   .tabs {
+    
+    @media(max-width: 768px) {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
     .btn {
       cursor: pointer;
       margin: 5px 0;
@@ -156,7 +166,8 @@ export default {
 
     .skills-images {
       display: grid;
-      grid-template-columns: repeat(3, auto);
+      // grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
       justify-content: space-around;
       gap: 8px;
 

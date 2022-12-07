@@ -1,15 +1,21 @@
 <template lang="pug">
 .modal(@click="close")
   .modal-content(@click.stop)
-    img(:src="requireImg(project.img)")
+    //- img(:src="requireImg(project.img)")
+    slider
     .modal-info
       h1 {{ project.name }}
       p text text text
 </template>
 
 <script>
+import Slider from './slider.vue';
+
 export default {
   name: "modal",
+  components: {
+    Slider
+  },
   props: ["project"],
   methods: {
     close() {
@@ -46,7 +52,8 @@ export default {
     grid-template-columns: 3fr 2fr;
 
     img {
-      width: 550px;
+      width: 100%;
+      max-width: 600px;
       box-shadow: 2px 2px 8px #333;
       border-radius: 4px;
     }

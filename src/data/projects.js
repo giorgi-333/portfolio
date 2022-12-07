@@ -2,27 +2,33 @@ const projectsList = [
     {
         cat: 1,
         name: 'The contract chair company',
-        img: '1.png'
+        link: 'https://www.thecontractchair.co.uk/',
+        img: 'contract_1.png',
+        allImg: ['contract_1.png','contract_1.png','contract_1.png']
     },
     {
         cat: 1,
-        name: 'The contract chair company',
-        img: '1.png'
+        name: 'Brainer',
+        link: 'https://www.brainer.ge/',
+        img: 'brainer_1.png'
     },
     {
         cat: 1,
-        name: 'The contract chair company',
-        img: '1.png'
+        name: 'Hospitalsoft',
+        link: 'http://start.ge/',
+        img: 'hospital_1.png'
     },
     {
         cat: 2,
-        name: 'The contract chair company',
-        img: '1.png'
+        name: 'Coding world',
+        link: 'https://coding-world.com/',
+        img: 'coding_1.png'
     },
     {
         cat: 2,
-        name: 'The contract chair company',
-        img: '1.png'
+        name: '#1 Public School of Chiatura',
+        link: 'https://chiatura.coding-world.com/',
+        img: 'chiatura_1.png'
     }
 ]
 

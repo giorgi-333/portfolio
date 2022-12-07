@@ -40,6 +40,16 @@ export default {
   display: grid;
   grid-template-rows:  max-content auto;
   row-gap: 20px;
+
+  
+  @media(max-width: 1030px) {
+        position: unset;
+        grid-template-rows: auto;
+        height: auto;
+        // new proporties
+        width: 100%;
+        // margin-bottom: 15px;
+  }
 }
 
 .my-info {
@@ -49,6 +59,13 @@ export default {
   background-color: #a0c3d7;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+
+  @media(max-width: 1030px) {
+        width: 100%;
+        box-shadow: none;
+        border-radius: unset;
+        padding: 30px 0;
+  }
 
   &.avatar-info {
     font-family: 'Itim', sans-serif;
@@ -81,6 +98,10 @@ export default {
   padding: 20px;
   font-family: 'Nunito', sans-serif;
   border-radius: 30px;
+
+  @media(max-width: 1030px) {
+        display: none;
+  }
 
   h3 {
     text-align: center;
