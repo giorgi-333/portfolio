@@ -27,9 +27,6 @@
             <div class="cont" id="contact">
                 <contact />
             </div>
-            <div class="cont" id="contact">
-                <!-- <slider /> -->
-            </div>
         </div>
         <img
             src="@/assets/icons/arrow-top.png"
@@ -123,6 +120,11 @@ export default {
     padding-top: 20px;
     padding-bottom: 50px;
     border-bottom: 1px solid rgb(164, 160, 158);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 }
 
 .right-side .cont > div {
