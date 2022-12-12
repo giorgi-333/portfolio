@@ -98,8 +98,13 @@ export default {
   .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 250px;
+    grid-auto-rows: 250px; /* is it ok? */
     gap: 20px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
     .project {
       position: relative;
@@ -129,6 +134,7 @@ export default {
         visibility: hidden;
         transition: 1s;
         opacity: 0;
+        text-align: center;
 
 
         h2 {

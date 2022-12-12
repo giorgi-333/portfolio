@@ -116,6 +116,12 @@ export default {
           border: 1px solid #a0c3d7;
           border-radius: 50%;
 
+          @media (max-width: 480px) {
+            width: 17px;
+            height: 17px;
+            margin-right: 5px;
+          }
+
           &.active {
             background-color: #a0c3d7;
           }

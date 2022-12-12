@@ -11,7 +11,7 @@
                 span My Position:
                 b Front-End
                 span My Used Technologies:
-                b Vue&Nuxt (Pug,Sass..)
+                b Vue&Nuxt (Pug, Sass..)
 </template>
 
 <script>
@@ -24,17 +24,15 @@ export default {
     },
     props: ["project"],
     data() {
-      return {
-        el: null,
-        newPosX: 0,
-        newPosY: 0,
-        startPosX: 0,
-        startPosY: 0
-      }
+        return {
+            el: null,
+            newPosX: 0,
+            newPosY: 0,
+            startPosX: 0,
+            startPosY: 0,
+        };
     },
     mounted() {
-      console.log(this.$refs.el);
-
         // when the user clicks down on the element
         this.$refs.el.addEventListener("mousedown", (e) => {
             e.preventDefault();
@@ -43,10 +41,10 @@ export default {
             this.startPosX = e.clientX;
             this.startPosY = e.clientY;
 
-            document.addEventListener("mousemove", this.mouseMove );
+            document.addEventListener("mousemove", this.mouseMove);
 
             document.addEventListener("mouseup", () => {
-                document.removeEventListener("mousemove", this.mouseMove );
+                document.removeEventListener("mousemove", this.mouseMove);
             });
         });
     },
@@ -58,18 +56,20 @@ export default {
             return require(`@/assets/projects/${img}`);
         },
         mouseMove(e) {
-    // calculate the new position
-    this.newPosX = this.startPosX - e.clientX;
-    this.newPosY = this.startPosY - e.clientY;
+            // calculate the new position
+            this.newPosX = this.startPosX - e.clientX;
+            this.newPosY = this.startPosY - e.clientY;
 
-    // with each move we also want to update the start X and Y
-    this.startPosX = e.clientX;
-    this.startPosY = e.clientY;
-    
-    // set the element's new position:
-    this.$refs.el.style.top = (this.$refs.el.offsetTop - this.newPosY) + "px";
-    this.$refs.el.style.left = (this.$refs.el.offsetLeft - this.newPosX) + "px";
-}
+            // with each move we also want to update the start X and Y
+            this.startPosX = e.clientX;
+            this.startPosY = e.clientY;
+
+            // set the element's new position:
+            this.$refs.el.style.top =
+                this.$refs.el.offsetTop - this.newPosY + "px";
+            this.$refs.el.style.left =
+                this.$refs.el.offsetLeft - this.newPosX + "px";
+        },
     },
 };
 </script>
@@ -88,7 +88,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.55);
 
     .modal-content {
-        cursor: move;
+        // cursor: move;
         min-width: 400px;
         min-height: 300px;
         background-color: #fff;
@@ -97,11 +97,12 @@ export default {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         display: grid;
         // grid-template-columns: 3fr 2fr;
 
         img {
+            cursor: move;
             width: 100%;
             max-width: 600px;
             box-shadow: 2px 2px 8px #333;
