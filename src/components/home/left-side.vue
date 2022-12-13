@@ -40,9 +40,10 @@ export default {
     }
   },
   methods: {
-    // goToScroll() {
-    //   this.$router.push({ hash })
-    // }
+    goToScroll() {
+      // this.$router.push({ hash })
+      document.documentElement.style.overflow = 'auto'
+    }
   },
   watch: {
     menuShow(val) {
@@ -59,8 +60,17 @@ export default {
     // }
   },
   mounted() {
-    
     console.log(this.$route.hash)
+    const links = document.querySelectorAll(".menu a")
+    links.forEach( link => {
+      link.addEventListener("click", () => {
+        document.documentElement.style.overflow = 'auto'
+        if(this.menuShow) {
+          this.menuShow = false
+        }
+        return true
+      })
+    })
   }
 }
 </script>
@@ -183,6 +193,7 @@ export default {
   top: 10px;
   right: 10px;
   display: none;
+  z-index: 1;
 
   @media(max-width: 1030px) {
       display: block;
