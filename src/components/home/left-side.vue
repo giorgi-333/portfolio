@@ -5,7 +5,7 @@
     div
       h1 Giorgi Enuqidze
       div Web Developer
-  .my-info.menu-cont
+  .my-info.menu-cont(:class="{'active': menuShow}")
     h3 Navigation
     .menu
       a(href='#aboutMe')
@@ -23,11 +23,45 @@
       a(href='#contact')
         img(src='@/assets/icons/envelope.png')
         span Contact
+  img.menu-icon(:src="menuIcon" @click="menuShow = !menuShow")
 </template>
 
 <script>
 export default {
-  name: "left-side"
+  name: "left-side",
+  data() {
+    return {
+      menuShow: false
+    }
+  },
+  computed: {
+    menuIcon() {
+      return require(`@/assets/icons/${this.menuShow ? 'close' : 'burger'}.png`) 
+    }
+  },
+  methods: {
+    // goToScroll() {
+    //   this.$router.push({ hash })
+    // }
+  },
+  watch: {
+    menuShow(val) {
+      if(val) {
+          document.documentElement.style.overflow = 'hidden'
+      } else {
+         document.documentElement.style.overflow = 'auto'
+      }
+    },
+    // '$route.hash'(val) {
+    //   if(this.menuShow) {
+    //     this.menuShow = false
+    //   }
+    // }
+  },
+  mounted() {
+    
+    console.log(this.$route.hash)
+  }
 }
 </script>
 
@@ -100,11 +134,29 @@ export default {
   border-radius: 30px;
 
   @media(max-width: 1030px) {
-        display: none;
+        // display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 270px;
+        max-width: calc(100% - 65px);
+        height: 100vh;
+        border-radius: 0;
+        z-index: 1;
+        box-shadow: 2px 2px 8px #333;
+        transition: .4s;
+        transform: translateX(-100%);
+        &.active {
+          transform: translateX(0);
+        }
   }
 
   h3 {
     text-align: center;
+
+    @media(max-width: 1030px) {
+        display: none;
+    }
   }
 }
 
@@ -124,4 +176,16 @@ export default {
   }
 }
 
+.menu-icon {
+  cursor: pointer;
+  width: 50px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: none;
+
+  @media(max-width: 1030px) {
+      display: block;
+  }
+}
 </style>
