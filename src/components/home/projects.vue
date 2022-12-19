@@ -1,17 +1,25 @@
 <template lang="pug">
 .projects
-  h1 Projects
-    img(src='@/assets/icons/info.png')
-  .tabs
-    .tab(v-for="item in tabs" :class="{'active': item.id === tab}" @click="tab=item.id")
-      | {{ item.text }}
-  .list
-    .project(v-for="item in projects" :class="{'animation':animation}" @click="project = item; showModal = true")
-      img(:src="requireImg(item.img)")
-      .overlay
-        h2 {{ item.name }}
-        button read more
-  modal(v-if="showModal" :project="project" @close="showModal = false")
+    h1 Projects
+        img(src="@/assets/icons/info.png")
+    .tabs
+        .tab(
+            v-for="item in tabs",
+            :class="{ active: item.id === tab }",
+            @click="tab = item.id"
+        )
+            | {{ item.text }}
+    .list
+        .project(
+            v-for="item in projects",
+            :class="{ animation: animation }",
+            @click="project = item; showModal = true"
+        )
+            img(:src="requireImg(item.img)")
+            .overlay
+                h2 {{ item.name }}
+                button Read More
+    modal(v-if="showModal", :project="project", @close="showModal = false")
 </template>
 
 <script>
@@ -19,53 +27,53 @@ import projectsList from "@/data/projects";
 import modal from "@/components/general/modal";
 //
 export default {
-  name: "projects",
-  components: {
-    modal
-  },
-  data() {
-    return {
-      animation: true,
-      project: null,
-      showModal: false,
-      tabs: [
-        {
-          id: null,
-          text: 'All'
+    name: "projects",
+    components: {
+        modal,
+    },
+    data() {
+        return {
+            animation: true,
+            project: null,
+            showModal: false,
+            tabs: [
+                {
+                    id: null,
+                    text: "All",
+                },
+                {
+                    id: 1,
+                    text: "At job",
+                },
+                {
+                    id: 2,
+                    text: "Independently",
+                },
+            ],
+            tab: null,
+        };
+    },
+    computed: {
+        projects() {
+            return projectsList.filter((item) => {
+                return !this.tab || this.tab === item.cat;
+            });
         },
-        {
-          id: 1,
-          text: 'At job'
+    },
+    methods: {
+        requireImg(img) {
+            return require(`@/assets/projects/${img}`);
         },
-        {
-          id: 2,
-          text: 'Independently'
-        }
-      ],
-      tab: null
-    }
-  },
-  computed: {
-    projects() {
-      return projectsList.filter((item) => {
-        return !this.tab || this.tab === item.cat
-      })
-    }
-  },
-  methods: {
-    requireImg(img) {
-      return require(`@/assets/projects/${img}`)
-    }
-  },
-  watch: {
-    tab() {
-      this.animation = false
-      setTimeout(()=> {
-        this.animation = true
-      },1)
-    }
-  }
-}
+    },
+    watch: {
+        tab() {
+            this.animation = false;
+            setTimeout(() => {
+                this.animation = true;
+            }, 1);
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -143,8 +151,13 @@ export default {
         }
 
         button {
+          cursor: pointer;
           margin-top: 15px;
-          padding: 5px 15px;
+          padding: 7px 25px;
+          background-color: #a0c3d7;
+          border: none;
+          border-radius: 40px;
+          font-size: 16px;
         }
       }
 
