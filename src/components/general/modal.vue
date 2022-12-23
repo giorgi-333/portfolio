@@ -6,12 +6,18 @@
         .modal-info(@mousemove.stop)
             h1 {{ project.name }}
             .all-info 
-                span Development Company:
-                b Gray Ltd.
+                template(v-if="!project.invidial")
+                    span Development Company:
+                    b {{ project.company }}
+                template(v-else)
+                    span Development Type:
+                    b Independently
                 span My Position:
-                b Front-End
+                b {{ project.position }}
                 span My Used Technologies:
-                b Vue&Nuxt (Pug, Sass..)
+                b {{ project.technologies }}
+                span Link:
+                a(:href="project.link" target="_blank") Go to website (Demo)
 </template>
 
 <script>
@@ -127,6 +133,11 @@ export default {
                 grid-template-columns: minmax(50%, auto) 1fr;
                 align-items: center;
                 column-gap: 5px;
+
+                a {
+                    color: #327ece;
+                    font-weight: bold;     
+                }
             }
         }
     }

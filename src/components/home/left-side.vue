@@ -60,7 +60,6 @@ export default {
     // }
   },
   mounted() {
-    console.log(this.$route.hash)
     const links = document.querySelectorAll(".menu a")
     links.forEach( link => {
       link.addEventListener("click", () => {
