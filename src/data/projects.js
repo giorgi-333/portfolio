@@ -6,7 +6,9 @@ const projectsList = [
         position: 'Front-End',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'https://www.thecontractchair.co.uk/',
-        img: 'contract_1.png'
+        link_type: 'Live',
+        img: 'contract_1.png',
+        langs: ['English']
     },
     {
         cat: 1,
@@ -15,7 +17,9 @@ const projectsList = [
         position: 'Front-End',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'https://www.brainer.ge/',
-        img: 'brainer_1.png'
+        link_type: 'Live',
+        img: 'brainer_1.png',
+        langs: ['Georgian']
     },
     {
         cat: 1,
@@ -24,7 +28,9 @@ const projectsList = [
         position: 'Front-End',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'http://start.ge/',
-        img: 'hospital_1.png'
+        link_type: 'Demo',
+        img: 'hospital_1.png',
+        langs: ['Georgian', 'English']
     },
     {
         cat: 2,
@@ -33,7 +39,9 @@ const projectsList = [
         position: 'Full-Stack',
         technologies: 'Vue&Nuxt (Pug, Sass..), Laravel (PHP&MySql)',
         link: 'https://coding-world.com/',
-        img: 'coding_1.png'
+        link_type: 'Live',
+        img: 'coding_1.png',
+        langs: ['Georgian']
     },
     {
         cat: 2,
@@ -42,7 +50,9 @@ const projectsList = [
         position: 'Full-Stack',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'https://chiatura.coding-world.com/',
-        img: 'chiatura_1.png'
+        link_type: 'Demo',
+        img: 'chiatura_1.png',
+        langs: ['Georgian']
     }
 ]
 

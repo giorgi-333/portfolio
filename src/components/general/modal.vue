@@ -16,8 +16,13 @@
                 b {{ project.position }}
                 span My Used Technologies:
                 b {{ project.technologies }}
+                span Languages:
+                b
+                    template(v-for="(lang,i) in project.langs")
+                        | {{lang}}
+                        template(v-if="i < project.langs.length - 1") , 
                 span Link:
-                a(:href="project.link" target="_blank") Go to website (Demo)
+                a(:href="project.link" target="_blank") Go to website ({{project.link_type}})
 </template>
 
 <script>
@@ -107,6 +112,11 @@ export default {
         display: grid;
         // grid-template-columns: 3fr 2fr;
 
+        @media (max-width: 420px) {
+            min-width: calc(100% - 20px);
+            padding: 20px 10px;
+        }
+
         img {
             cursor: move;
             width: 100%;
@@ -133,6 +143,11 @@ export default {
                 grid-template-columns: minmax(50%, auto) 1fr;
                 align-items: center;
                 column-gap: 5px;
+
+                @media (max-width: 420px) {
+                    grid-template-columns: 50% 1fr;
+                    font-size: 16px;
+                }
 
                 a {
                     color: #327ece;
