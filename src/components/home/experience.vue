@@ -5,15 +5,15 @@
         .date 2022 - Present
         .exp-text
             h2 Front-end developer
-            div Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name
+            div Vue Developer in "Hospitalsoft" LTD. A Medical project. Group and individual work.
         .date 2021 - Present
         .exp-text
             h2 Collage teacher
-            div Collage theme around your products and services. products and services. Your brand is not your Logo or your Company Name r products and services. Your brand is not your Logo or your Company Name
+            div Front-End teacher in college.
         .date 2021 - 2022
         .exp-text
             h2 Front-end developer
-            div Your brand is the core of your marketing, the central theme around your products and services. Your brand is not your Logo or your Company Name
+            div Vue (Nuxt) Developer in "Graey" LTD. A variety of projects. Group and individual work.
 </template>
 
 <script>
