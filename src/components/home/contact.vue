@@ -17,7 +17,7 @@
         )
             img(src="@/assets/icons/upwork.png")
         a(
-            href="https://www.linkedin.com/in/giorgi-enuqidze-610942248/",
+            href="https://www.linkedin.com/in/giorgi-Enukidze-610942248/",
             target="_blank"
         )
             img(src="@/assets/icons/linkedin.png")

@@ -3,7 +3,7 @@
   .my-info.avatar-info
     img(src='@/assets/img/itsme.jpg')
     div
-      h1 Giorgi Enuqidze
+      h1 Giorgi Enukidze
       div Web Developer
   .my-info.menu-cont(:class="{'active': menuShow}")
     h3 Navigation
