@@ -17,14 +17,14 @@ const projectsList = [
         position: 'Front-End',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'https://www.brainer.ge/',
-        link_type: 'Live',
+        link_type: 'Disabled',
         img: 'brainer_1.png',
         langs: ['Georgian']
     },
     {
         cat: 1,
-        name: 'Hospitalsoft',
-        company: 'Gray Ltd.',
+        name: 'Webmed',
+        company: 'Hospitalsoft Ltd.',
         position: 'Front-End',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'http://start.ge/',
@@ -50,7 +50,7 @@ const projectsList = [
         position: 'Full-Stack',
         technologies: 'Vue&Nuxt (Pug, Sass..)',
         link: 'https://chiatura.coding-world.com/',
-        link_type: 'Demo',
+        link_type: 'Disabled',
         img: 'chiatura_1.png',
         langs: ['Georgian']
     }

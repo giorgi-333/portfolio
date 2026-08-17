@@ -5,12 +5,7 @@
             <div class="cont">
                 <h1>Hello, I am giorgi</h1>
                 <div>
-                    I am web developer, I Have working experience with front-end
-                    but i also know back-end. My goal is create modern and
-                    responsive websites. I have graduated from Georgian
-                    Technical University of Informatics and Management Systems.
-                    As you will see below I am also professional teacher of
-                    college.
+                    I am a web developer with working experience in front-end development, though I also have knowledge of back-end technologies. My goal is to create modern, responsive websites. I graduated from the Georgian Technical University of Informatics and Management Systems. As you'll see below, I am also an experienced college instructor. Additionally, I run a YouTube channel where I teach programming and computer skills.
                     <a href=""></a>
                 </div>
                 <education />

@@ -4,6 +4,11 @@
     .links
         a(href="https://github.com/giorgi-333", target="_blank")
             img(src="@/assets/icons/github.svg")
+        a(
+            href="https://www.youtube.com/@coding-world",
+            target="_blank"
+        )
+            img(src="@/assets/icons/youtube.png")
         a(href="https://www.fiverr.com/giorgi33", target="_blank")
             img(src="@/assets/icons/fiver.png")
         a(

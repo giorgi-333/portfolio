@@ -85,6 +85,10 @@ export default {
                             img: "react.png",
                             text: "React",
                         },
+                        {
+                            img: "react.png",
+                            text: "React Native",
+                        }
                     ],
                 },
                 {
@@ -97,11 +101,7 @@ export default {
                         {
                             img: "c-sharp.png",
                             text: "C#",
-                        },
-                        {
-                            img: "react.png",
-                            text: "React Native",
-                        },
+                        }
                     ],
                 },
             ],
